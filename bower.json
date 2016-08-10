@@ -1,0 +1,25 @@
+{
+  "name": "on-page",
+  "ignore": [],
+  "homepage": "https://github.com/marknotton/on-page",
+  "author": {
+    "name": "Mark Notton",
+    "url": "http://www.marknotton.uk"
+  },
+  "description": "Call a function if an element is on the page",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marknotton/on-page"
+  },
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": ""
+  },
+  "_source": "git://github.com/marknotton/on-page.git",
+  "_target": "^1.0.0",
+  "_originalSource": "marknotton"
+}
