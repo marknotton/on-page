@@ -22,34 +22,42 @@
 
 (function($){
 
-    // Add the selector, function, and breakpoint rules into an array, to be called when the screen resizes
-    $.fn.onPage = function() {
-        var args = Array.prototype.slice.call(arguments);
-        var delay = false;
-        var callback = false;
+  // Add the selector, function, and breakpoint rules into an array, to be called when the screen resizes
+  $.fn.onPage = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var delay = false;
+    var callback = false;
 
-        if(typeof args[0] == 'number') {
-            delay = args.shift();
-            callback = args.shift();
-        } else {
-            callback = args.shift();
-        }
+    if(typeof args[0] == 'number') {
+      delay = args.shift();
+      callback = args.shift();
+    } else {
+      callback = args.shift();
+    }
 
-        if (typeof callback == 'function') {
-            // Perform a few checks to make sure the selector that is being checked is valid
-            var selector = this.selector !== undefined && this.selector !== null && $(this.selector).length ? this.selector : null;
+    var selector = this.selector !== undefined && this.selector !== null && $(this.selector).length ? this.selector : null;
 
-            if (selector) {
-                if ( delay && delay !== 0) {
-                    setTimeout(function() {
-                        callback.apply($(selector), args);
-                    }, delay);
-                } else {
-                    callback.apply($(selector), args);
-                }
-            }
-        }
-        return this;
-    };
+    if (typeof callback == 'function' && selector) {
+
+      if ( delay && delay !== 0) {
+          setTimeout(function() {
+              callback.apply($(selector), args);
+          }, delay);
+      } else {
+          callback.apply($(selector), args);
+      }
+
+      return this.selector;
+
+    } else if ( selector ){
+
+      return this.selector;
+
+    } else {
+
+      return false;
+
+    }
+  };
 
 })( jQuery );
