@@ -1,5 +1,15 @@
 # On Page
 
+Check if a given element exists on the page. Perform callbacks for both true or false and add delays on those callbacks.
+
+## Installation
+
+```
+bower install on-page --save
+```
+
+## Usage
+
 If given element exists on the page, returns element object. Otherwise returns ```false``` boolean
 ```
 $('.element').onPage();
