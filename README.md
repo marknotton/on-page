@@ -38,7 +38,8 @@ $('.element').onPage(3000, function() {
 });
 ```
 
-### TODO:
+## TODO
+
 To make the callbacks trigger only after the element check has been delayed, add ```true``` to the argument list.
 This is designed to be used if you expect an elements to be added to the DOM programmatically.
 ```
