@@ -23,6 +23,7 @@
   $.fn.onPage = function() {
     var args = Array.prototype.slice.call(arguments),
         delay = false,
+        delayCheck = false,
         callbackTrue = null,
         callbackFalse = null;
 
@@ -43,22 +44,32 @@
         } else if ( callbackFalse == null ) {
           callbackFalse = setting;
         }
+      } else if (typeof setting == 'boolean') {
+        delayCheck = setting;
       }
     }
 
     var selector = this;
+
+    if ( delayCheck ) {
+      console.log('delaying for ' + delay + ' seconds before checking wether the element exists on page');
+      //TODO: if delayCheck is true, perform the setTimeout BEFORE checking
+      //if the elements exists on the page. This is so you can add an
+      //onPage check, with a delay on items that might be added to the Dom programmatically.
+      // delay = false;
+    }
 
     if (delay !== false && callbackTrue == null && callbackFalse == null) {
       console.warn('On Page: You have defined a ' + delay + ' second delay, but no functions to callback when the timeout is complete. Add atleast one callback function in the second argument', selector);
     }
 
     if ($(selector).length) {
-      // Dpes exist on page
+      // Does exist on page
       if (callbackTrue != null) {
         if ( delay && delay !== 0) {
           setTimeout(function() {
             callbackTrue.apply(selector);
-          }, delay*1000);
+          }, delay);
         } else {
           callbackTrue.apply(selector);
         }
@@ -71,7 +82,7 @@
         if ( delay && delay !== 0) {
           setTimeout(function() {
             callbackFalse.apply(selector);
-          }, delay*1000);
+          }, delay);
         } else {
           callbackFalse.apply(selector);
         }
