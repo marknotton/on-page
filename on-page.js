@@ -20,6 +20,11 @@
 
 (function($){
 
+  // TODO: Add notOnPage option
+  $.fn.notOnPage = function() {
+
+  }
+
   $.fn.onPage = function() {
     var args = Array.prototype.slice.call(arguments),
         delay = false,

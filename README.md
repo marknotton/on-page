@@ -46,3 +46,8 @@ $('.element').onPage(3000, true, function() {
   console.log('.element is on this page', this);
 });
 ```
+
+All of the above works as above, only the callback functions will be triggered in reverse order
+```
+$('.element').notOnPage( ... );
+```
