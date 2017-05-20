@@ -1,0 +1,9 @@
+{
+  "name": "on-page",
+  "version": "1.0.2",
+  "description": "Call a function if an element is on the page",
+  "main": "on-page.js",
+  "repository": "https://github.com/marknotton/on-page",
+  "author": "Mark Notton <mark@marknotton.uk>",
+  "license": "MIT"
+}
