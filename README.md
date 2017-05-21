@@ -4,8 +4,19 @@ Check if a given element exists on the page. Perform callbacks for both true or 
 
 ## Installation
 
+### [NPM](https://www.npmjs.com/package/on-page-checker)
 ```
-bower install on-page --save
+npm i on-page-checker
+```
+
+### [Yarn](https://yarnpkg.com/en/package/on-page-checker)
+```
+yarn add on-page-checker
+```
+
+### Bower
+```
+bower install on-page-checker
 ```
 
 ## Usage

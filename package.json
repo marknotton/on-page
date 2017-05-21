@@ -1,7 +1,7 @@
 {
-  "name": "on-page",
-  "version": "1.0.2",
-  "description": "Call a function if an element is on the page",
+  "name": "on-page-marknotton",
+  "version": "1.0.3",
+  "description": "Check if a given element exists on the page. Perform callbacks for both true or false and add delays on those callbacks.",
   "main": "on-page.js",
   "repository": "https://github.com/marknotton/on-page",
   "author": "Mark Notton <mark@marknotton.uk>",
