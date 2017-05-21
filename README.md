@@ -1,4 +1,4 @@
-# On Page
+# On Page Checker
 
 Check if a given element exists on the page. Perform callbacks for both true or false and add delays on those callbacks.
 
