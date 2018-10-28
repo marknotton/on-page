@@ -1,8 +1,8 @@
 {
   "name": "on-page-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check if a given element exists on the page. Perform callbacks for both true or false and add delays on those callbacks.",
-  "main": "on-page-checker.js",
+  "main": "on-page.js",
   "repository": "https://www.npmjs.com/package/on-page-checker",
   "author": "Mark Notton <mark@marknotton.uk>",
   "license": "MIT"
