@@ -4,6 +4,18 @@
 
 class onPage {
 
+  /**
+  * Do some fancy regex stuff to place the version number within the filename string
+  * @param {object} elements  HTML elements.
+  * @param {array}  args      Accepts upto two functions for callbacks,
+  *                           and a number for optional delays.
+  *        {func}             First function will be used as a callback if elements exists
+  *                           This returns the HTML element in the callback.
+  *        {func}             section function will be used as a callback if elements doesn't exists
+  *        {number}           The number of miliseconds to delay the callback. 3000 = 3 seconds.
+  * @example $('main').onPage(500, ( element ) => { ... }, () => { ... });
+  */
+
   constructor(elements, args) {
 
     // Return false is no elements were passed
